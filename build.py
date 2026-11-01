@@ -222,6 +222,14 @@ footer .fl{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bo
 .ratio{position:relative;padding-top:56.25%;background:#000}
 .ratio iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .modal-box .m-f{display:flex;gap:8px;padding:13px 16px;flex-wrap:wrap}
+.whale-box{margin:4px auto 28px;max-width:660px;border:1px solid var(--line);border-radius:var(--radius);
+background:linear-gradient(180deg,rgba(34,211,238,.09),rgba(251,114,153,.05));padding:20px 10px 16px;
+box-shadow:0 14px 34px rgba(0,0,0,.35)}
+.whale{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Courier New",monospace;font-size:12.5px;line-height:1.3;
+color:#7dd3fc;text-align:center;white-space:pre;overflow-x:auto}
+.whale-text{margin-top:12px;font-size:21px;font-weight:700;letter-spacing:3px;text-align:center;
+background:linear-gradient(90deg,var(--cyan),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+@media (max-width:560px){.whale{font-size:8.5px}.whale-text{font-size:17px}}
 @media (max-width:560px){.hero h1{font-size:30px}.grid{grid-template-columns:1fr}}
 """
 
@@ -243,6 +251,10 @@ HTML = f"""<!DOCTYPE html>
 </div></nav>
 <div class="wrap">
 <header class="hero">
+  <div class="whale-box">
+<pre class="whale">__WHALE_ART__</pre>
+<p class="whale-text">欢迎参观我的个人主页</p>
+</div>
   <span class="avatar"><img src="{esc(prof['avatar_url'])}" alt="天狗线人头像"></span>
   <h1>天狗线人</h1>
   <p class="handles">GitHub @Xbox123z · Bilibili 千早爱圣音 · Instagram @z8463384</p>
@@ -374,6 +386,18 @@ HTML = f"""<!DOCTYPE html>
 </html>
 """
 
+WHALE_ART = r"""                   .  .  .
+                    \ | /
+                     \|/
+               _..--~~~~--.._
+           .-''               ''-.
+         /      o                   \
+        |           \___/            |
+         \                          /
+          \_                      _/
+            ''--..__________..--''
+       ~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~"""
+
 GALLERY_JS = r"""
 const grid = document.getElementById('repoGrid');
 const cards = [...grid.querySelectorAll('.repo')];
@@ -424,7 +448,7 @@ document.getElementById('copyM3u8').addEventListener('click', async e => {
 });
 """
 
-open(os.path.join(HERE, "index.html"), "w", encoding="utf-8").write(HTML.replace("__GALLERY_JS__", GALLERY_JS))
+open(os.path.join(HERE, "index.html"), "w", encoding="utf-8").write(HTML.replace("__GALLERY_JS__", GALLERY_JS).replace("__WHALE_ART__", WHALE_ART))
 print("index.html bytes:", len(HTML.encode("utf-8")))
 print("index.m3u8 lines:", m3u8_text.count("\n"))
 print("repos:", len(pub_repos), "public /", len(priv_repos), "private | videos:", len(bili["videos"]))
