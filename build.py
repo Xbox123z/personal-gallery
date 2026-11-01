@@ -223,13 +223,15 @@ footer .fl{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bo
 .ratio iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .modal-box .m-f{display:flex;gap:8px;padding:13px 16px;flex-wrap:wrap}
 .whale-box{margin:4px auto 28px;max-width:880px;border:1px solid var(--line);border-radius:var(--radius);
-background:linear-gradient(180deg,rgba(34,211,238,.09),rgba(251,114,153,.05));padding:20px 10px 16px;
+background:linear-gradient(180deg,rgba(34,211,238,.09),rgba(251,114,153,.05));padding:76px 10px 64px;text-align:center;
 box-shadow:0 14px 34px rgba(0,0,0,.35)}
 .whale{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Courier New",monospace;font-size:10.5px;line-height:1.25;
-color:#7dd3fc;text-align:center;white-space:pre;overflow-x:auto}
+color:#7dd3fc;text-align:center;white-space:pre;overflow-x:visible;display:inline-block;animation:whale-spin 18s linear infinite}
 .whale-text{margin-top:12px;font-size:21px;font-weight:700;letter-spacing:3px;text-align:center;
 background:linear-gradient(90deg,var(--cyan),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
 @media (max-width:560px){.whale{font-size:5.2px}.whale-text{font-size:17px}}
+@keyframes whale-spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.whale{animation:none}}
 @media (max-width:560px){.hero h1{font-size:30px}.grid{grid-template-columns:1fr}}
 """
 
