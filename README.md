@@ -4,7 +4,7 @@
 
 - **GitHub**：全部公开仓库（可搜索、按语言筛选）＋私有仓库名单
 - **Bilibili「千早爱圣音」**：投稿视频（站内内嵌播放）、视频直链 m3u8 索引、图文动态精选
-- **谷歌博客**：xbox123z-github 与「菲勒斯与claudevibecoding内容分享」两博全部文章
+- **谷歌博客**：xbox123z-github 的全部文章
 - **社交**：Instagram、Facebook 入口与近期帖子
 
 ## 技术
