@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>天狗线人 · Xbox123z — 个人主页 Gallery</title>
+<meta name="description" content="天狗线人（Xbox123z）的个人主页：GitHub 全部仓库、Bilibili「千早爱圣音」视频与动态、谷歌博客、Instagram 与 Facebook 一站展示。">
+<style>
+:root{--bg:#0a0d13;--panel:#11151d;--panel2:#161b26;--line:#232a38;--txt:#e8ecf3;--sub:#9aa5b5;
+--pink:#fb7299;--cyan:#22d3ee;--violet:#8b7cf6;--radius:16px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:radial-gradient(900px 480px at 85% -5%,rgba(251,114,153,.14),transparent 60%),
+radial-gradient(800px 420px at -10% 20%,rgba(34,211,238,.10),transparent 60%),
+radial-gradient(700px 500px at 50% 110%,rgba(139,124,246,.10),transparent 60%),var(--bg);
+color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px 80px}
+nav{position:sticky;top:0;z-index:40;backdrop-filter:blur(14px);background:rgba(10,13,19,.72);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1120px;margin:0 auto;padding:12px 20px;display:flex;gap:18px;align-items:center;overflow-x:auto;white-space:nowrap}
+.nav-in b{font-size:15px;margin-right:6px}
+.nav-in a{color:var(--sub);font-size:14px}
+.nav-in a:hover{color:var(--txt)}
+.hero{text-align:center;padding:64px 0 30px}
+.avatar{width:118px;height:118px;border-radius:50%;padding:3px;background:linear-gradient(135deg,var(--pink),var(--violet),var(--cyan));display:inline-block}
+.avatar img{width:100%;height:100%;border-radius:50%;display:block;border:3px solid var(--bg)}
+.hero h1{font-size:38px;margin-top:16px;letter-spacing:.5px}
+.hero .handles{color:var(--sub);margin-top:6px;font-size:14px}
+.hero .slogan{margin:18px auto 4px;font-size:17px;color:#f5c6d6;font-style:italic}
+.hero .bio{color:var(--sub);font-size:14px;white-space:pre-line}
+.jump{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:24px}
+.jump a{padding:9px 18px;border-radius:999px;border:1px solid var(--line);background:var(--panel);font-size:14px;transition:.2s}
+.jump a:hover{transform:translateY(-2px);border-color:var(--pink)}
+.stats{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin:34px 0 6px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:14px 22px;text-align:center;min-width:110px}
+.stat b{display:block;font-size:22px}
+.stat span{color:var(--sub);font-size:12px}
+section{margin-top:56px}
+.sec-h{display:flex;align-items:baseline;gap:12px;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:20px}
+.sec-h h2{font-size:24px}
+.sec-h .cnt{color:var(--pink);font-size:14px}
+.sec-h .more{margin-left:auto;color:var(--sub);font-size:13px}
+.sub-h{font-size:16px;color:var(--sub);margin:26px 0 14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px;display:block;transition:.2s}
+a.card:hover{transform:translateY(-3px);border-color:#33405a;background:var(--panel2)}
+.card-top{display:flex;align-items:center;gap:8px}
+.repo-name{font-weight:600;font-size:15px;color:#7dd3fc;word-break:break-all}
+.badge{font-size:11px;color:var(--sub);border:1px solid var(--line);border-radius:999px;padding:1px 8px}
+.badge.star{color:#fbbf24;border-color:#4a3a17}
+.badge.lock{color:#f5c6d6}
+.card-desc{color:var(--sub);font-size:13.5px;margin:8px 0 12px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:42px}
+.card-meta{color:#6b7688;font-size:12.5px;display:flex;align-items:center;gap:5px}
+.dot{width:9px;height:9px;border-radius:50%;display:inline-block}
+.sep{opacity:.5}
+.toolbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;align-items:center}
+.toolbar input{flex:1;min-width:200px;background:var(--panel);border:1px solid var(--line);color:var(--txt);
+border-radius:999px;padding:9px 16px;font-size:14px;outline:none}
+.toolbar input:focus{border-color:var(--pink)}
+.chip{background:var(--panel);border:1px solid var(--line);color:var(--sub);border-radius:999px;padding:6px 13px;font-size:13px;cursor:pointer}
+.chip.active{color:#fff;border-color:var(--pink);background:rgba(251,114,153,.16)}
+.profile-strip{display:flex;flex-wrap:wrap;gap:18px;align-items:center;background:linear-gradient(120deg,rgba(251,114,153,.12),rgba(139,124,246,.08));
+border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;margin-bottom:20px}
+.profile-strip .who b{font-size:19px}
+.profile-strip .who p{color:var(--sub);font-size:13px}
+.profile-strip .nums{display:flex;gap:20px;margin-left:auto;flex-wrap:wrap}
+.profile-strip .nums div{text-align:center}
+.profile-strip .nums b{display:block;font-size:18px}
+.profile-strip .nums span{color:var(--sub);font-size:12px}
+.btn{display:inline-block;padding:9px 18px;border-radius:999px;background:var(--pink);color:#fff;font-size:14px;font-weight:600}
+.card.video{padding:0;overflow:hidden}
+.thumb{position:relative;display:block;width:100%;border:0;background:none;cursor:pointer;padding:0}
+.thumb img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.play-btn{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:34px;color:#fff;
+background:rgba(5,8,14,.28);opacity:0;transition:.2s}
+.thumb:hover .play-btn{opacity:1}
+.dur{position:absolute;right:8px;bottom:8px;background:rgba(0,0,0,.72);color:#fff;font-size:12px;padding:1px 7px;border-radius:6px}
+.v-body{padding:14px 16px 16px}
+.v-body h4{font-size:15px;margin-bottom:6px}
+.v-actions{display:flex;gap:8px;margin-top:12px}
+.mini{border:1px solid var(--line);background:var(--panel2);color:var(--txt);border-radius:999px;padding:6px 14px;font-size:13px;cursor:pointer}
+.mini.primary{background:var(--pink);border-color:var(--pink);color:#fff;font-weight:600}
+.m3u8-panel{margin-top:22px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.m3u8-panel h3{font-size:16px;margin-bottom:6px}
+.m3u8-panel p{color:var(--sub);font-size:13px}
+.m3u8-panel pre{margin-top:12px;background:#07090e;border:1px solid var(--line);border-radius:10px;padding:12px;
+font-size:11.5px;color:#8fd3a8;overflow-x:auto;max-height:180px;overflow-y:auto;white-space:pre-wrap;word-break:break-all}
+.opus-row{display:flex;justify-content:space-between;gap:14px;padding:11px 6px;border-bottom:1px dashed var(--line);font-size:14.5px}
+.opus-row:hover{color:#f5c6d6}
+.opus-date{color:#6b7688;font-size:12.5px;white-space:nowrap}
+.post-row{display:flex;flex-direction:column;padding:12px 6px;border-bottom:1px dashed var(--line)}
+.post-row:hover .post-title{color:#7dd3fc}
+.post-title{font-size:15px}
+.post-meta{color:#6b7688;font-size:12.5px}
+.social-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.social-card .card-top b{font-size:16px}
+.social-card ul{list-style:none;margin-top:10px}
+.social-card li{padding:7px 0;border-bottom:1px dashed var(--line);font-size:14px}
+.social-card li:last-child{border:0}
+.social-card li a:hover{color:#f5c6d6}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:22px;color:#6b7688;font-size:13px;text-align:center}
+footer .fl{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:10px}
+.modal{position:fixed;inset:0;background:rgba(3,5,9,.82);display:none;align-items:center;justify-content:center;z-index:80;padding:18px}
+.modal.open{display:flex}
+.modal-box{width:min(880px,100%);background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.modal-box .m-h{display:flex;align-items:center;gap:10px;padding:13px 16px}
+.modal-box .m-h b{flex:1;font-size:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.modal-box .x{background:none;border:0;color:var(--sub);font-size:22px;cursor:pointer}
+.ratio{position:relative;padding-top:56.25%;background:#000}
+.ratio iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.modal-box .m-f{display:flex;gap:8px;padding:13px 16px;flex-wrap:wrap}
+@media (max-width:560px){.hero h1{font-size:30px}.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav><div class="nav-in">
+  <b>🖼️ 天狗线人 Gallery</b>
+  <a href="#github">GitHub 仓库</a><a href="#bilibili">Bilibili</a><a href="#blog">博客</a><a href="#social">社交</a>
+  <a href="https://github.com/Xbox123z" target="_blank" rel="noopener">GitHub ↗</a>
+  <a href="https://space.bilibili.com/3493110919203314" target="_blank" rel="noopener">B站空间 ↗</a>
+</div></nav>
+<div class="wrap">
+<header class="hero">
+  <span class="avatar"><img src="https://avatars.githubusercontent.com/u/241255654?v=4" alt="天狗线人头像"></span>
+  <h1>天狗线人</h1>
+  <p class="handles">GitHub @Xbox123z · Bilibili 千早爱圣音 · Instagram @z8463384</p>
+  <p class="slogan">「聆听破碎乐团里，没说出口的余音。」</p>
+  <p class="bio">ciallo,l love coding
+contact v me:
+z8463384@gmail.com</p>
+  <div class="jump">
+    <a href="https://github.com/Xbox123z" target="_blank" rel="noopener">🐙 GitHub 主页</a>
+    <a href="https://space.bilibili.com/3493110919203314" target="_blank" rel="noopener">📺 B站空间</a>
+    <a href="https://www.instagram.com/z8463384/" target="_blank" rel="noopener">📸 Instagram</a>
+    <a href="https://www.facebook.com/122142780963145822" target="_blank" rel="noopener">📘 Facebook</a>
+    <a href="https://xbox123z-github.blogspot.com" target="_blank" rel="noopener">✍️ 博客 · xbox123z-github</a>
+    <a href="https://1644z114514lzp.blogspot.com" target="_blank" rel="noopener">✍️ 博客 · 菲勒斯与claudevibecoding</a>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>46</b><span>GitHub 公开仓库</span></div>
+    <div class="stat"><b>3</b><span>B站投稿视频</span></div>
+    <div class="stat"><b>11</b><span>精选图文动态</span></div>
+    <div class="stat"><b>3</b><span>博客文章</span></div>
+    <div class="stat"><b>9</b><span>B站粉丝</span></div>
+  </div>
+</header>
+
+<section id="github">
+  <div class="sec-h"><h2>🐙 GitHub 仓库</h2><span class="cnt">46 个公开 · 2 个私有</span>
+  <a class="more" href="https://github.com/Xbox123z?tab=repositories" target="_blank" rel="noopener">在 GitHub 查看全部 ↗</a></div>
+  <div class="toolbar">
+    <input id="repoSearch" type="search" placeholder="搜索仓库名或简介…">
+    <button class="chip active" data-lang="all">全部</button><button class="chip" data-lang="C#">C#</button><button class="chip" data-lang="Dart">Dart</button><button class="chip" data-lang="Go">Go</button><button class="chip" data-lang="HTML">HTML</button><button class="chip" data-lang="Java">Java</button><button class="chip" data-lang="JavaScript">JavaScript</button><button class="chip" data-lang="Kotlin">Kotlin</button><button class="chip" data-lang="PowerShell">PowerShell</button><button class="chip" data-lang="Python">Python</button><button class="chip" data-lang="Rust">Rust</button><button class="chip" data-lang="Shell">Shell</button><button class="chip" data-lang="TypeScript">TypeScript</button>
+  </div>
+  <div class="grid" id="repoGrid">
+<a class="card repo" href="https://github.com/Xbox123z/incident-full-investigation" target="_blank" rel="noopener"
+   data-name="incident-full-investigation" data-lang="其他" data-desc="adb/shizuku 通道事故·调查全次数（多轮多角度，round-01...）">
+  <div class="card-top"><span class="repo-name">incident-full-investigation</span></div>
+  <p class="card-desc">ADB/Shizuku 通道事故·调查全次数（多轮多角度，round-01...）</p>
+  <div class="card-meta"><span class="dot" style="background:#8b949e"></span>其他
+    <span class="sep">·</span>更新 2026-11-01</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/huawei-apk-repatch-skill" target="_blank" rel="noopener"
+   data-name="huawei-apk-repatch-skill" data-lang="Python" data-desc="force-install high-minsdk apks on huawei/harmonyos &amp; low-api android: binary minsdk patch + hand-rolled v1/v2 signing + dex pairip license removal + on-device adb self-connect. verified: grok 1.2.50 on android 12 huawei.">
+  <div class="card-top"><span class="repo-name">huawei-apk-repatch-skill</span><span class="badge star">★ 2</span></div>
+  <p class="card-desc">Force-install high-minSdk APKs on Huawei/HarmonyOS &amp; low-API Android: binary minSdk patch + hand-rolled v1/v2 signing + DEX PairIP license removal + on-device adb self-connect. Verified: Grok 1.2.50 on Android 12 Huawei.</p>
+  <div class="card-meta"><span class="dot" style="background:#3572A5"></span>Python
+    <span class="sep">·</span>更新 2026-11-01</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/muse-work-logs" target="_blank" rel="noopener"
+   data-name="muse-work-logs" data-lang="其他" data-desc="muse 工作日志，用户查阅用">
+  <div class="card-top"><span class="repo-name">muse-work-logs</span></div>
+  <p class="card-desc">Muse 工作日志，用户查阅用</p>
+  <div class="card-meta"><span class="dot" style="background:#8b949e"></span>其他
+    <span class="sep">·</span>更新 2026-11-01</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/agent-otp-login-failure-analysis" target="_blank" rel="noopener"
+   data-name="agent-otp-login-failure-analysis" data-lang="其他" data-desc="受控个人智能体系统中的机密隔离、设备同步与反自动化机制——一次短信验证码登录失败的系统性分析">
+  <div class="card-top"><span class="repo-name">agent-otp-login-failure-analysis</span></div>
+  <p class="card-desc">受控个人智能体系统中的机密隔离、设备同步与反自动化机制——一次短信验证码登录失败的系统性分析</p>
+  <div class="card-meta"><span class="dot" style="background:#8b949e"></span>其他
+    <span class="sep">·</span>更新 2026-11-01</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/-" target="_blank" rel="noopener"
+   data-name="-" data-lang="其他" data-desc="adb/shizuku 通道事故·调查全次数（多轮多角度）">
+  <div class="card-top"><span class="repo-name">-</span></div>
+  <p class="card-desc">ADB/Shizuku 通道事故·调查全次数（多轮多角度）</p>
+  <div class="card-meta"><span class="dot" style="background:#8b949e"></span>其他
+    <span class="sep">·</span>更新 2026-11-01</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/Mika" target="_blank" rel="noopener"
+   data-name="mika" data-lang="其他" data-desc="an on-device ai agent for android that operates apps and the web to get things done for you.">
+  <div class="card-top"><span class="repo-name">Mika</span><span class="badge">fork</span></div>
+  <p class="card-desc">An on-device AI agent for Android that operates apps and the web to get things done for you.</p>
+  <div class="card-meta"><span class="dot" style="background:#8b949e"></span>其他
+    <span class="sep">·</span>更新 2026-11-01</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/mika-delivery" target="_blank" rel="noopener"
+   data-name="mika-delivery" data-lang="Kotlin" data-desc="mika 派生分支：决策类模型(decision/startlux)探测失败不再把整家服务商判为不可用,且不允许当作主模型。upstream: wangzan101/mika @ 736b53d">
+  <div class="card-top"><span class="repo-name">mika-delivery</span></div>
+  <p class="card-desc">Mika 派生分支：决策类模型(decision/startlux)探测失败不再把整家服务商判为不可用,且不允许当作主模型。upstream: wangzan101/Mika @ 736b53d</p>
+  <div class="card-meta"><span class="dot" style="background:#A97BFF"></span>Kotlin
+    <span class="sep">·</span>更新 2026-11-01</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/deviceinfo" target="_blank" rel="noopener"
+   data-name="deviceinfo" data-lang="Java" data-desc="设备信息 - 自研版安卓原生应用（纯 java，零依赖）：设备/cpu/内存/存储/屏幕/电池/网络/传感器/相机/系统 10 类信息，深色主题，minsdk 23，任何安卓手机可用">
+  <div class="card-top"><span class="repo-name">deviceinfo</span><span class="badge star">★ 1</span></div>
+  <p class="card-desc">设备信息 - 自研版安卓原生应用（纯 Java，零依赖）：设备/CPU/内存/存储/屏幕/电池/网络/传感器/相机/系统 10 类信息，深色主题，minSdk 23，任何安卓手机可用</p>
+  <div class="card-meta"><span class="dot" style="background:#b07219"></span>Java
+    <span class="sep">·</span>更新 2026-10-30</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/samsung-private-memo" target="_blank" rel="noopener"
+   data-name="samsung-private-memo" data-lang="Java" data-desc="三星隐私备忘录 - 10 个独立加密账号的安卓备忘录（aes-256-gcm + keystore + 指纹/生物识别），minsdk 23，纯原生 java">
+  <div class="card-top"><span class="repo-name">samsung-private-memo</span></div>
+  <p class="card-desc">三星隐私备忘录 - 10 个独立加密账号的安卓备忘录（AES-256-GCM + Keystore + 指纹/生物识别），minSdk 23，纯原生 Java</p>
+  <div class="card-meta"><span class="dot" style="background:#b07219"></span>Java
+    <span class="sep">·</span>更新 2026-10-30</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/sfm-recovery" target="_blank" rel="noopener"
+   data-name="sfm-recovery" data-lang="C#" data-desc="sfm gameplay recovery research, tools, and progress.">
+  <div class="card-top"><span class="repo-name">sfm-recovery</span><span class="badge">fork</span></div>
+  <p class="card-desc">SFM gameplay recovery research, tools, and progress.</p>
+  <div class="card-meta"><span class="dot" style="background:#178600"></span>C#
+    <span class="sep">·</span>更新 2026-10-28</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/astral" target="_blank" rel="noopener"
+   data-name="astral" data-lang="TypeScript" data-desc="终端星河 · ascii 星际画面的跨平台加密通信与桌游 cli（局域网/热点/蓝牙，千人房间，端到端加密，狼人杀/三国杀/大富翁）">
+  <div class="card-top"><span class="repo-name">astral</span></div>
+  <p class="card-desc">终端星河 · ASCII 星际画面的跨平台加密通信与桌游 CLI（局域网/热点/蓝牙，千人房间，端到端加密，狼人杀/三国杀/大富翁）</p>
+  <div class="card-meta"><span class="dot" style="background:#3178c6"></span>TypeScript
+    <span class="sep">·</span>更新 2026-10-25</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/nekomimi-eso" target="_blank" rel="noopener"
+   data-name="nekomimi-eso" data-lang="Rust" data-desc="🐱‍👤 猫耳深奥语言编译器 - fuck &amp; &gt;&lt;&gt; 解释器 (rust cli + go server + web)">
+  <div class="card-top"><span class="repo-name">nekomimi-eso</span></div>
+  <p class="card-desc">🐱‍👤 猫耳深奥语言编译器 - Fuck &amp; &gt;&lt;&gt; 解释器 (Rust CLI + Go Server + Web)</p>
+  <div class="card-meta"><span class="dot" style="background:#dea584"></span>Rust
+    <span class="sep">·</span>更新 2026-10-25</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/pi-agent" target="_blank" rel="noopener"
+   data-name="pi-agent" data-lang="Rust" data-desc="pi agent — 开源轻量 ai agent（rust，内置免费模型账号池）">
+  <div class="card-top"><span class="repo-name">pi-agent</span></div>
+  <p class="card-desc">Pi Agent — 开源轻量 AI Agent（Rust，内置免费模型账号池）</p>
+  <div class="card-meta"><span class="dot" style="background:#dea584"></span>Rust
+    <span class="sep">·</span>更新 2026-10-25</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/breeze-browser" target="_blank" rel="noopener"
+   data-name="breeze-browser" data-lang="JavaScript" data-desc="breeze — 极简浏览器 (windows/macos/android)，chrome 数据导入+自定义壁纸">
+  <div class="card-top"><span class="repo-name">breeze-browser</span></div>
+  <p class="card-desc">Breeze — 极简浏览器 (Windows/macOS/Android)，Chrome 数据导入+自定义壁纸</p>
+  <div class="card-meta"><span class="dot" style="background:#f1e05a"></span>JavaScript
+    <span class="sep">·</span>更新 2026-10-25</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/bluetooth-arena" target="_blank" rel="noopener"
+   data-name="bluetooth-arena" data-lang="Rust" data-desc="📶 bluetooth arena - 蓝牙自组网游戏大厅：狼人杀 + 国际象棋，ble mesh 多跳互联，支持百人房间">
+  <div class="card-top"><span class="repo-name">bluetooth-arena</span></div>
+  <p class="card-desc">📶 Bluetooth Arena - 蓝牙自组网游戏大厅：狼人杀 + 国际象棋，BLE Mesh 多跳互联，支持百人房间</p>
+  <div class="card-meta"><span class="dot" style="background:#dea584"></span>Rust
+    <span class="sep">·</span>更新 2026-10-25</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/stm32-smartcar-sim" target="_blank" rel="noopener"
+   data-name="stm32-smartcar-sim" data-lang="Rust" data-desc="🏎️ stm32 智能车仿真平台 - 真实物理引擎世界模拟 + stm32 代码仿真测试 (cli + web)">
+  <div class="card-top"><span class="repo-name">stm32-smartcar-sim</span></div>
+  <p class="card-desc">🏎️ STM32 智能车仿真平台 - 真实物理引擎世界模拟 + STM32 代码仿真测试 (CLI + Web)</p>
+  <div class="card-meta"><span class="dot" style="background:#dea584"></span>Rust
+    <span class="sep">·</span>更新 2026-10-25</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/nekomimi-compiler" target="_blank" rel="noopener"
+   data-name="nekomimi-compiler" data-lang="Go" data-desc="🐱‍👤 nekomimi compiler - 猫耳编译器 | 可爱 rust &amp; go 编译器集成 (cli + web, 动漫风格)">
+  <div class="card-top"><span class="repo-name">nekomimi-compiler</span></div>
+  <p class="card-desc">🐱‍👤 Nekomimi Compiler - 猫耳编译器 | 可爱 Rust &amp; Go 编译器集成 (CLI + Web, 动漫风格)</p>
+  <div class="card-meta"><span class="dot" style="background:#00ADD8"></span>Go
+    <span class="sep">·</span>更新 2026-10-25</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/newsapp" target="_blank" rel="noopener"
+   data-name="newsapp" data-lang="JavaScript" data-desc="">
+  <div class="card-top"><span class="repo-name">newsapp</span></div>
+  <p class="card-desc">暂无简介，点进去看看源码和 README。</p>
+  <div class="card-meta"><span class="dot" style="background:#f1e05a"></span>JavaScript
+    <span class="sep">·</span>更新 2026-10-22</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/TrendPulse" target="_blank" rel="noopener"
+   data-name="trendpulse" data-lang="Kotlin" data-desc="">
+  <div class="card-top"><span class="repo-name">TrendPulse</span></div>
+  <p class="card-desc">暂无简介，点进去看看源码和 README。</p>
+  <div class="card-meta"><span class="dot" style="background:#A97BFF"></span>Kotlin
+    <span class="sep">·</span>更新 2026-10-22</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/rea" target="_blank" rel="noopener"
+   data-name="rea" data-lang="其他" data-desc="reverse engineer anything with agents, from app behavior down to native binaries.">
+  <div class="card-top"><span class="repo-name">rea</span><span class="badge">fork</span></div>
+  <p class="card-desc">Reverse engineer anything with agents, from app behavior down to native binaries.</p>
+  <div class="card-meta"><span class="dot" style="background:#8b949e"></span>其他
+    <span class="sep">·</span>更新 2026-10-10</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/opentelemetry-collector-contrib" target="_blank" rel="noopener"
+   data-name="opentelemetry-collector-contrib" data-lang="其他" data-desc="contrib repository for the opentelemetry collector">
+  <div class="card-top"><span class="repo-name">opentelemetry-collector-contrib</span><span class="badge">fork</span></div>
+  <p class="card-desc">Contrib repository for the OpenTelemetry Collector</p>
+  <div class="card-meta"><span class="dot" style="background:#8b949e"></span>其他
+    <span class="sep">·</span>更新 2026-10-12</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/ReCut" target="_blank" rel="noopener"
+   data-name="recut" data-lang="其他" data-desc="">
+  <div class="card-top"><span class="repo-name">ReCut</span><span class="badge">fork</span></div>
+  <p class="card-desc">暂无简介，点进去看看源码和 README。</p>
+  <div class="card-meta"><span class="dot" style="background:#8b949e"></span>其他
+    <span class="sep">·</span>更新 2026-10-12</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/zlib-android" target="_blank" rel="noopener"
+   data-name="zlib-android" data-lang="Kotlin" data-desc="z-library android client - kotlin + jetpack compose port of heartleo/zlib">
+  <div class="card-top"><span class="repo-name">zlib-android</span></div>
+  <p class="card-desc">Z-Library Android client - Kotlin + Jetpack Compose port of heartleo/zlib</p>
+  <div class="card-meta"><span class="dot" style="background:#A97BFF"></span>Kotlin
+    <span class="sep">·</span>更新 2026-10-10</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/zlib" target="_blank" rel="noopener"
+   data-name="zlib" data-lang="其他" data-desc="a command-line tool for z-library. search, download, send to kindle, and integrate with ai agents.">
+  <div class="card-top"><span class="repo-name">zlib</span><span class="badge">fork</span></div>
+  <p class="card-desc">A command-line tool for Z-Library. Search, download, send to Kindle, and integrate with AI agents.</p>
+  <div class="card-meta"><span class="dot" style="background:#8b949e"></span>其他
+    <span class="sep">·</span>更新 2026-10-04</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/ambient-light-frosted-page" target="_blank" rel="noopener"
+   data-name="ambient-light-frosted-page" data-lang="其他" data-desc="frosted page - a full-page frosted ambient light preset for the ambient light for youtube extension">
+  <div class="card-top"><span class="repo-name">ambient-light-frosted-page</span></div>
+  <p class="card-desc">Frosted Page - a full-page frosted ambient light preset for the Ambient light for YouTube extension</p>
+  <div class="card-meta"><span class="dot" style="background:#8b949e"></span>其他
+    <span class="sep">·</span>更新 2026-10-04</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/REKCARC-TSC-UHT" target="_blank" rel="noopener"
+   data-name="rekcarc-tsc-uht" data-lang="其他" data-desc="清华大学计算机系课程攻略 guidance for courses in department of computer science and technology, tsinghua university">
+  <div class="card-top"><span class="repo-name">REKCARC-TSC-UHT</span><span class="badge">fork</span><span class="badge star">★ 1</span></div>
+  <p class="card-desc">清华大学计算机系课程攻略 Guidance for courses in Department of Computer Science and Technology, Tsinghua University</p>
+  <div class="card-meta"><span class="dot" style="background:#8b949e"></span>其他
+    <span class="sep">·</span>更新 2026-09-17</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/weather-api-integration" target="_blank" rel="noopener"
+   data-name="weather-api-integration" data-lang="TypeScript" data-desc="">
+  <div class="card-top"><span class="repo-name">weather-api-integration</span></div>
+  <p class="card-desc">暂无简介，点进去看看源码和 README。</p>
+  <div class="card-meta"><span class="dot" style="background:#3178c6"></span>TypeScript
+    <span class="sep">·</span>更新 2026-08-03</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/HuiqiGram" target="_blank" rel="noopener"
+   data-name="huiqigram" data-lang="HTML" data-desc="">
+  <div class="card-top"><span class="repo-name">HuiqiGram</span></div>
+  <p class="card-desc">暂无简介，点进去看看源码和 README。</p>
+  <div class="card-meta"><span class="dot" style="background:#e34c26"></span>HTML
+    <span class="sep">·</span>更新 2026-08-02</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/AetherNovelReader" target="_blank" rel="noopener"
+   data-name="aethernovelreader" data-lang="Kotlin" data-desc="">
+  <div class="card-top"><span class="repo-name">AetherNovelReader</span></div>
+  <p class="card-desc">暂无简介，点进去看看源码和 README。</p>
+  <div class="card-meta"><span class="dot" style="background:#A97BFF"></span>Kotlin
+    <span class="sep">·</span>更新 2026-08-02</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/AetherFirefoxAnime" target="_blank" rel="noopener"
+   data-name="aetherfirefoxanime" data-lang="Dart" data-desc="">
+  <div class="card-top"><span class="repo-name">AetherFirefoxAnime</span></div>
+  <p class="card-desc">暂无简介，点进去看看源码和 README。</p>
+  <div class="card-meta"><span class="dot" style="background:#00B4AB"></span>Dart
+    <span class="sep">·</span>更新 2026-08-02</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/PixelAnimeROM" target="_blank" rel="noopener"
+   data-name="pixelanimerom" data-lang="Shell" data-desc="">
+  <div class="card-top"><span class="repo-name">PixelAnimeROM</span></div>
+  <p class="card-desc">暂无简介，点进去看看源码和 README。</p>
+  <div class="card-meta"><span class="dot" style="background:#89e051"></span>Shell
+    <span class="sep">·</span>更新 2026-08-02</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/AihongTenDays" target="_blank" rel="noopener"
+   data-name="aihongtendays" data-lang="JavaScript" data-desc="">
+  <div class="card-top"><span class="repo-name">AihongTenDays</span></div>
+  <p class="card-desc">暂无简介，点进去看看源码和 README。</p>
+  <div class="card-meta"><span class="dot" style="background:#f1e05a"></span>JavaScript
+    <span class="sep">·</span>更新 2026-08-02</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/VirtualPixel" target="_blank" rel="noopener"
+   data-name="virtualpixel" data-lang="Kotlin" data-desc="">
+  <div class="card-top"><span class="repo-name">VirtualPixel</span></div>
+  <p class="card-desc">暂无简介，点进去看看源码和 README。</p>
+  <div class="card-meta"><span class="dot" style="background:#A97BFF"></span>Kotlin
+    <span class="sep">·</span>更新 2026-08-02</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/AetherV2Anime" target="_blank" rel="noopener"
+   data-name="aetherv2anime" data-lang="Dart" data-desc="">
+  <div class="card-top"><span class="repo-name">AetherV2Anime</span><span class="badge star">★ 1</span></div>
+  <p class="card-desc">暂无简介，点进去看看源码和 README。</p>
+  <div class="card-meta"><span class="dot" style="background:#00B4AB"></span>Dart
+    <span class="sep">·</span>更新 2026-08-02</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/AetherManager" target="_blank" rel="noopener"
+   data-name="aethermanager" data-lang="Kotlin" data-desc="">
+  <div class="card-top"><span class="repo-name">AetherManager</span></div>
+  <p class="card-desc">暂无简介，点进去看看源码和 README。</p>
+  <div class="card-meta"><span class="dot" style="background:#A97BFF"></span>Kotlin
+    <span class="sep">·</span>更新 2026-08-02</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/NERVOrganizer" target="_blank" rel="noopener"
+   data-name="nervorganizer" data-lang="Java" data-desc="">
+  <div class="card-top"><span class="repo-name">NERVOrganizer</span></div>
+  <p class="card-desc">暂无简介，点进去看看源码和 README。</p>
+  <div class="card-meta"><span class="dot" style="background:#b07219"></span>Java
+    <span class="sep">·</span>更新 2026-08-02</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/midnight-konbini" target="_blank" rel="noopener"
+   data-name="midnight-konbini" data-lang="HTML" data-desc="">
+  <div class="card-top"><span class="repo-name">midnight-konbini</span></div>
+  <p class="card-desc">暂无简介，点进去看看源码和 README。</p>
+  <div class="card-meta"><span class="dot" style="background:#e34c26"></span>HTML
+    <span class="sep">·</span>更新 2026-07-11</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/kimi-code" target="_blank" rel="noopener"
+   data-name="kimi-code" data-lang="其他" data-desc="kimi code cli  —  the starting point for next-gen agents">
+  <div class="card-top"><span class="repo-name">kimi-code</span><span class="badge">fork</span></div>
+  <p class="card-desc">Kimi Code CLI  —  The Starting Point for Next-Gen Agents</p>
+  <div class="card-meta"><span class="dot" style="background:#8b949e"></span>其他
+    <span class="sep">·</span>更新 2026-07-10</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/claude-code-anti-deception" target="_blank" rel="noopener"
+   data-name="claude-code-anti-deception" data-lang="Python" data-desc="">
+  <div class="card-top"><span class="repo-name">claude-code-anti-deception</span></div>
+  <p class="card-desc">暂无简介，点进去看看源码和 README。</p>
+  <div class="card-meta"><span class="dot" style="background:#3572A5"></span>Python
+    <span class="sep">·</span>更新 2026-06-05</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/llm-deception-case-study" target="_blank" rel="noopener"
+   data-name="llm-deception-case-study" data-lang="其他" data-desc="">
+  <div class="card-top"><span class="repo-name">llm-deception-case-study</span></div>
+  <p class="card-desc">暂无简介，点进去看看源码和 README。</p>
+  <div class="card-meta"><span class="dot" style="background:#8b949e"></span>其他
+    <span class="sep">·</span>更新 2026-06-03</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/AI-From-Zero" target="_blank" rel="noopener"
+   data-name="ai-from-zero" data-lang="PowerShell" data-desc="从零开始的ai编程之路：面向大学新生的全套ai工具教程">
+  <div class="card-top"><span class="repo-name">AI-From-Zero</span></div>
+  <p class="card-desc">从零开始的AI编程之路：面向大学新生的全套AI工具教程</p>
+  <div class="card-meta"><span class="dot" style="background:#012456"></span>PowerShell
+    <span class="sep">·</span>更新 2026-06-03</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/falcon9-launch-sim" target="_blank" rel="noopener"
+   data-name="falcon9-launch-sim" data-lang="HTML" data-desc="">
+  <div class="card-top"><span class="repo-name">falcon9-launch-sim</span></div>
+  <p class="card-desc">暂无简介，点进去看看源码和 README。</p>
+  <div class="card-meta"><span class="dot" style="background:#e34c26"></span>HTML
+    <span class="sep">·</span>更新 2026-06-03</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/ai-session-2026-06-03" target="_blank" rel="noopener"
+   data-name="ai-session-2026-06-03" data-lang="其他" data-desc="">
+  <div class="card-top"><span class="repo-name">ai-session-2026-06-03</span></div>
+  <p class="card-desc">暂无简介，点进去看看源码和 README。</p>
+  <div class="card-meta"><span class="dot" style="background:#8b949e"></span>其他
+    <span class="sep">·</span>更新 2026-06-03</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/ai-hallucination-2026-06-03" target="_blank" rel="noopener"
+   data-name="ai-hallucination-2026-06-03" data-lang="Python" data-desc="">
+  <div class="card-top"><span class="repo-name">ai-hallucination-2026-06-03</span></div>
+  <p class="card-desc">暂无简介，点进去看看源码和 README。</p>
+  <div class="card-meta"><span class="dot" style="background:#3572A5"></span>Python
+    <span class="sep">·</span>更新 2026-06-03</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/edgetunnel" target="_blank" rel="noopener"
+   data-name="edgetunnel" data-lang="其他" data-desc="edgetunnel2 vless/trojan 多功能面板">
+  <div class="card-top"><span class="repo-name">edgetunnel</span><span class="badge">fork</span><span class="badge star">★ 1</span></div>
+  <p class="card-desc">edgetunnel2 VLESS/Trojan 多功能面板</p>
+  <div class="card-meta"><span class="dot" style="background:#8b949e"></span>其他
+    <span class="sep">·</span>更新 2026-04-04</div>
+</a>
+<a class="card repo" href="https://github.com/Xbox123z/vibe-coding-z" target="_blank" rel="noopener"
+   data-name="vibe-coding-z" data-lang="HTML" data-desc="创建一个独立的html文件，通过cdn引入 three.js库，实现一个功能完整的3d魔方仿真。 该魔方必须具备自动还原的能力。 全部内容，一键完成，在聊天界面可以直接点开">
+  <div class="card-top"><span class="repo-name">vibe-coding-z</span></div>
+  <p class="card-desc">创建一个独立的HTML文件，通过CDN引入 Three.js库，实现一个功能完整的3D魔方仿真。 该魔方必须具备自动还原的能力。 全部内容，一键完成，在聊天界面可以直接点开</p>
+  <div class="card-meta"><span class="dot" style="background:#e34c26"></span>HTML
+    <span class="sep">·</span>更新 2026-03-14</div>
+</a>
+  </div>
+  <p id="repoEmpty" style="display:none;color:var(--sub);padding:12px 4px">没有匹配的仓库，换个关键词试试。</p>
+  <h3 class="sub-h">私有仓库（2）</h3>
+<div class="grid"><div class="card repo priv">
+  <div class="card-top"><span class="repo-name">paper-typewriter-android</span><span class="badge lock">🔒 私有</span></div>
+  <p class="card-desc">Offline typewriter keyboard and paper editor for Android</p>
+  <div class="card-meta">仅账号本人可见</div>
+</div><div class="card repo priv">
+  <div class="card-top"><span class="repo-name">vvff</span><span class="badge lock">🔒 私有</span></div>
+  <p class="card-desc">ffvvhhh</p>
+  <div class="card-meta">仅账号本人可见</div>
+</div></div>
+</section>
+
+<section id="bilibili">
+  <div class="sec-h"><h2>📺 Bilibili · 千早爱圣音</h2><span class="cnt">视频 3 · 图文动态 11 精选</span>
+  <a class="more" href="https://space.bilibili.com/3493110919203314" target="_blank" rel="noopener">去B站空间 ↗</a></div>
+  <div class="profile-strip">
+    <div class="who"><b>千早爱圣音</b> <span class="badge">LV3</span>
+      <p>UID 3493110919203314 · BanG Dream!（MyGO!!!!!／Ave Mujica）同好杂记<br>「聆听破碎乐团里，没说出口的余音。」</p></div>
+    <div class="nums">
+      <div><b>9</b><span>粉丝</span></div>
+      <div><b>465</b><span>关注</span></div>
+      <div><b>12</b><span>获赞</span></div>
+      <div><b>93</b><span>总播放</span></div>
+    </div>
+    <a class="btn" href="https://space.bilibili.com/3493110919203314" target="_blank" rel="noopener">访问空间</a>
+  </div>
+  <div class="grid">
+<article class="card video">
+  <button class="thumb" data-bvid="BV18HE36YEoi" data-title="【千早爱圣音】最新视频已上线，快来围观！" aria-label="内嵌播放">
+    <img src="https://i1.hdslb.com/bfs/archive/13c9fd521a56ee99e425290959f336236d58be16.jpg@672w_378h_1c.webp" alt="【千早爱圣音】最新视频已上线，快来围观！" loading="lazy" referrerpolicy="no-referrer">
+    <span class="play-btn">▶</span><span class="dur">00:11</span>
+  </button>
+  <div class="v-body">
+    <h4>【千早爱圣音】最新视频已上线，快来围观！</h4>
+    <div class="card-meta">播放 26 · 6月8日</div>
+    <div class="v-actions">
+      <button class="mini primary" data-bvid="BV18HE36YEoi" data-title="【千早爱圣音】最新视频已上线，快来围观！">▶ 内嵌播放</button>
+      <a class="mini" href="https://www.bilibili.com/video/BV18HE36YEoi/" target="_blank" rel="noopener">B站打开 ↗</a>
+    </div>
+  </div>
+</article>
+<article class="card video">
+  <button class="thumb" data-bvid="BV1FNfUBnERm" data-title="第一次做这个视频，不太熟练，AI咖啡店" aria-label="内嵌播放">
+    <img src="https://i1.hdslb.com/bfs/archive/1d95df7cd30a2ae4e19cce61aae338ab3841e9bc.jpg@672w_378h_1c.webp" alt="第一次做这个视频，不太熟练，AI咖啡店" loading="lazy" referrerpolicy="no-referrer">
+    <span class="play-btn">▶</span><span class="dur">00:16</span>
+  </button>
+  <div class="v-body">
+    <h4>第一次做这个视频，不太熟练，AI咖啡店</h4>
+    <div class="card-meta">播放 58 · 2月25日</div>
+    <div class="v-actions">
+      <button class="mini primary" data-bvid="BV1FNfUBnERm" data-title="第一次做这个视频，不太熟练，AI咖啡店">▶ 内嵌播放</button>
+      <a class="mini" href="https://www.bilibili.com/video/BV1FNfUBnERm/" target="_blank" rel="noopener">B站打开 ↗</a>
+    </div>
+  </div>
+</article>
+<article class="card video">
+  <button class="thumb" data-bvid="BV1Lbf1BTEE8" data-title="1点" aria-label="内嵌播放">
+    <img src="https://i1.hdslb.com/bfs/archive/935943c77f3549b4ce79053f6e3611c5ccb13cd5.jpg@672w_378h_1c.webp" alt="1点" loading="lazy" referrerpolicy="no-referrer">
+    <span class="play-btn">▶</span><span class="dur">00:12</span>
+  </button>
+  <div class="v-body">
+    <h4>1点</h4>
+    <div class="card-meta">播放 9 · 2月24日</div>
+    <div class="v-actions">
+      <button class="mini primary" data-bvid="BV1Lbf1BTEE8" data-title="1点">▶ 内嵌播放</button>
+      <a class="mini" href="https://www.bilibili.com/video/BV1Lbf1BTEE8/" target="_blank" rel="noopener">B站打开 ↗</a>
+    </div>
+  </div>
+</article>
+  </div>
+  <div class="m3u8-panel">
+    <h3>🎞️ 视频直链索引（m3u8 播放列表）</h3>
+    <p>本站全部 B 站视频的直链索引，生成于 2026-11-02 01:39（CST）。可下载为 index.m3u8 后用 VLC、PotPlayer 等播放器打开连播。
+    注意：B 站直链带时效签名，数小时后失效属正常现象；失效时用上方卡片的「内嵌播放」照常观看。</p>
+    <pre>#EXTM3U
+#PLAYLIST:千早爱圣音 · Bilibili 视频索引（生成于 2026-11-02 01:39 CST）
+# x-tvg-url=&quot;&quot;
+#EXTINF:11,千早爱圣音 - 【千早爱圣音】最新视频已上线，快来围观！ [BV18HE36YEoi]
+#EXTVLCOPT:http-referrer=https://www.bilibili.com/
+https://upos-sz-mirrorcosov.bilivideo.com/upgcxcode/78/73/38966067378/38966067378-1-192.mp4?e=ig8euxZM2rNcNbhV7bdVhwdlhzdjhwdVhoNvNC8BqJIzNbfq9rVEuxTEnE8L5F6VnEsSTx0vkX8fqJeYTj_lta53NCM=&amp;platform=html5&amp;uipk=5&amp;nbs=1&amp;gen=playurlv3&amp;os=cosovbv&amp;oi=1746782447&amp;trid=60eb0f633de147d0b9f930af0949e5eh&amp;mid=0&amp;deadline=1793561816&amp;og=hw&amp;upsig=93b7885ba02162a60b676a24bf8aff58&amp;uparams=e,platform,uipk,nbs,gen,os,oi,trid,mid,deadline,og&amp;bvc=vod&amp;nettype=0&amp;bw=2479131&amp;lrs=0&amp;V=v3.0.7&amp;build=0&amp;dl=0&amp;f=h_0_0&amp;agrr=0&amp;buvid=&amp;orderid=0,1
+#EXTINF:16,千早爱圣音 - 第一次做这个视频，不太熟练，AI咖啡店 [BV1FNfUBnERm]
+#EXTVLCOPT:http-referrer=https://www.bilibili.com/
+https://upos-sz-mirrorcosov.bilivideo.com/upgcxcode/92/27/36265592792/36265592792-1-192.mp4?e=ig8euxZM2rNcNbN17WdVhwdlhbRBhwdVhoNvNC8BqJIzNbfq9rVEuxTEnE8L5F6VnEsSTx0vkX8fqJeYTj_lta53NCM=&amp;mid=0&amp;deadline=1793561818&amp;nbs=1&amp;gen=playurlv3&amp;os=cosovbv&amp;og=ali&amp;platform=html5&amp;oi=1746781580&amp;trid=0a772fbdb17a467b8282fa91afe5717h&amp;uipk=5&amp;upsig=8c4a3e8a4e87c7a3404b52efd3301628&amp;uparams=e,mid,deadline,nbs,gen,os,og,platform,oi,trid,uipk&amp;bvc=vod&amp;nettype=0&amp;bw=1732011&amp;lrs=0&amp;V=v3.0.7&amp;dl=0&amp;f=h_0_0&amp;agrr=0&amp;buvid=&amp;build=0&amp;orderid=0,1
+#EXTINF:12,千早爱圣音 - 1点 [BV1Lbf1BTEE8]
+#EXTVLCOPT:http-referrer=https://www.bilibili.com/
+https://upos-hz-mirrorakam.akamaized.net/upgcxcode/28/66/36251896628/36251896628-1-192.mp4?e=ig8euxZM2rNcNbRVhwdVhwdlhWdVhwdVhoNvNC8BqJIzNbfq9rVEuxTEnE8L5F6VnEsSTx0vkX8fqJeYTj_lta53NCM=&amp;trid=1f24a7c8a2744dddbcb5fca8ba7a122h&amp;mid=0&amp;oi=1746782373&amp;nbs=1&amp;os=akam&amp;platform=html5&amp;deadline=1793561821&amp;uipk=5&amp;gen=playurlv3&amp;og=ali&amp;upsig=dcf375567f56e68cee7957ce6072b28d&amp;uparams=e,trid,mid,oi,nbs,os,platform,deadline,uipk,gen,og&amp;hdnts=exp=1793561821~hmac=5b677e112323976086cbfbd7eda0ff99fa5198830222fc03fa39498bf81a0132&amp;bvc=vod&amp;nettype=0&amp;bw=265298&amp;lrs=0&amp;V=v3.0.7&amp;build=0&amp;dl=0&amp;f=h_0_0&amp;agrr=0&amp;buvid=&amp;orderid=0,1
+</pre>
+    <div class="v-actions">
+      <a class="mini primary" href="index.m3u8" download>⬇ 下载 index.m3u8</a>
+      <button class="mini" id="copyM3u8">复制索引内容</button>
+    </div>
+  </div>
+  <h3 class="sub-h">图文动态精选（2026-11-01）</h3>
+  <div>
+<a class="opus-row" href="https://www.bilibili.com/opus/1265726969566199812" target="_blank" rel="noopener">
+  <span class="opus-title">《双乐队同框的标题，我等了两年》（晚间主篇）</span><span class="opus-date">2026-11-01</span></a>
+<a class="opus-row" href="https://www.bilibili.com/opus/1265738376949006343" target="_blank" rel="noopener">
+  <span class="opus-title">立希「真正想要的从来不是道歉」</span><span class="opus-date">2026-11-01</span></a>
+<a class="opus-row" href="https://www.bilibili.com/opus/1265740009086910485" target="_blank" rel="noopener">
+  <span class="opus-title">睦的两张脸：保护还是牢笼</span><span class="opus-date">2026-11-01</span></a>
+<a class="opus-row" href="https://www.bilibili.com/opus/1265741890247983105" target="_blank" rel="noopener">
+  <span class="opus-title">双团对照「两种无法合奏的悲剧」</span><span class="opus-date">2026-11-01</span></a>
+<a class="opus-row" href="https://www.bilibili.com/opus/1265743633998413827" target="_blank" rel="noopener">
+  <span class="opus-title">爱音本命「最不主角的地方」</span><span class="opus-date">2026-11-01</span></a>
+<a class="opus-row" href="https://www.bilibili.com/opus/1265745867403427889" target="_blank" rel="noopener">
+  <span class="opus-title">倒计时 68 天名场面重刷</span><span class="opus-date">2026-11-01</span></a>
+<a class="opus-row" href="https://www.bilibili.com/opus/1265747525272338441" target="_blank" rel="noopener">
+  <span class="opus-title">二选一：灯的自白 vs 祥子的宣战</span><span class="opus-date">2026-11-01</span></a>
+<a class="opus-row" href="https://www.bilibili.com/opus/1265748998445072424" target="_blank" rel="noopener">
+  <span class="opus-title">乐奈野猫</span><span class="opus-date">2026-11-01</span></a>
+<a class="opus-row" href="https://www.bilibili.com/opus/1265750617660325905" target="_blank" rel="noopener">
+  <span class="opus-title">爽世的温柔最累</span><span class="opus-date">2026-11-01</span></a>
+<a class="opus-row" href="https://www.bilibili.com/opus/1265752275503022081" target="_blank" rel="noopener">
+  <span class="opus-title">海铃的冷与若麦的戏</span><span class="opus-date">2026-11-01</span></a>
+<a class="opus-row" href="https://www.bilibili.com/opus/1265753542470139926" target="_blank" rel="noopener">
+  <span class="opus-title">CRYCHIC 的雨夜</span><span class="opus-date">2026-11-01</span></a>
+  </div>
+</section>
+
+<section id="blog">
+  <div class="sec-h"><h2>✍️ 谷歌博客</h2><span class="cnt">2 个博客 · 3 篇文章</span></div>
+  <div class="grid" style="margin-bottom:8px">
+    <a class="card" href="https://xbox123z-github.blogspot.com" target="_blank" rel="noopener">
+      <div class="card-top"><span class="repo-name">xbox123z-github</span></div>
+      <p class="card-desc">技术向博客：项目实录与折腾记录。</p>
+      <div class="card-meta">xbox123z-github.blogspot.com</div></a>
+    <a class="card" href="https://1644z114514lzp.blogspot.com" target="_blank" rel="noopener">
+      <div class="card-top"><span class="repo-name">菲勒斯与claudevibecoding内容分享</span></div>
+      <p class="card-desc">概念与随笔分享。</p>
+      <div class="card-meta">1644z114514lzp.blogspot.com</div></a>
+  </div>
+<a class="post-row" href="https://xbox123z-github.blogspot.com/2026/11/apkhuawei-apk-repatch-skill.html" target="_blank" rel="noopener">
+  <span class="post-title">装不上的 APK，也能装进华为手机——huawei-apk-repatch-skill</span>
+  <span class="post-meta">2026-11-01 · xbox123z-github.blogspot.com</span></a>
+<a class="post-row" href="https://xbox123z-github.blogspot.com/2026/10/blog-post.html" target="_blank" rel="noopener">
+  <span class="post-title">黄花岗公园一游</span>
+  <span class="post-meta">2026-10-31 · xbox123z-github.blogspot.com</span></a>
+<a class="post-row" href="https://1644z114514lzp.blogspot.com/2026/05/blog-post.html" target="_blank" rel="noopener">
+  <span class="post-title">利女理想国  补充概念</span>
+  <span class="post-meta">2026-05-26 · 1644z114514lzp.blogspot.com</span></a>
+</section>
+
+<section id="social">
+  <div class="sec-h"><h2>🌐 社交账号</h2></div>
+  <div class="social-grid">
+    <div class="card social-card">
+      <div class="card-top"><b>📸 Instagram</b><span class="badge">@z8463384</span></div>
+      <ul>
+        <li><a href="https://www.instagram.com/reel/DfKP7HDjOz2/" target="_blank" rel="noopener">短剧《猪脚饭立规人》Reel ↗</a></li>
+        <li><a href="https://www.instagram.com/p/DfMukVqjqrF/" target="_blank" rel="noopener">AetherV2Anime 项目图文 ↗</a></li>
+        <li><a href="https://www.instagram.com/p/DfKOlUfjN_F/" target="_blank" rel="noopener">huawei-apk-repatch-skill 项目图文 ↗</a></li>
+      </ul>
+      <div class="v-actions"><a class="mini primary" href="https://www.instagram.com/z8463384/" target="_blank" rel="noopener">去 Instagram 主页</a></div>
+    </div>
+    <div class="card social-card">
+      <div class="card-top"><b>📘 Facebook</b><span class="badge">刘惠琪</span></div>
+      <ul>
+        <li><a href="https://www.facebook.com/122142780963145822" target="_blank" rel="noopener">AetherV2Anime 项目帖 ↗</a></li>
+        <li><a href="https://www.facebook.com/122142657411145822" target="_blank" rel="noopener">huawei-apk-repatch-skill 项目帖 ↗</a></li>
+      </ul>
+      <div class="v-actions"><a class="mini primary" href="https://www.facebook.com/122142780963145822" target="_blank" rel="noopener">去 Facebook 看最新帖</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fl">
+    <a href="https://github.com/Xbox123z" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://space.bilibili.com/3493110919203314" target="_blank" rel="noopener">Bilibili</a>
+    <a href="https://www.instagram.com/z8463384/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://xbox123z-github.blogspot.com" target="_blank" rel="noopener">博客①</a>
+    <a href="https://1644z114514lzp.blogspot.com" target="_blank" rel="noopener">博客②</a>
+    <a href="https://github.com/Xbox123z/personal-gallery" target="_blank" rel="noopener">本站源码</a>
+  </div>
+  <p>© 2026 天狗线人 Xbox123z · 本页数据汇总于 2026-11-02 01:39 CST · 部署于 Deno Deploy</p>
+</footer>
+</div>
+
+<div class="modal" id="playerModal" role="dialog" aria-modal="true">
+  <div class="modal-box">
+    <div class="m-h"><b id="mTitle">视频播放</b><button class="x" id="mClose" aria-label="关闭">×</button></div>
+    <div class="ratio"><iframe id="mFrame" src="" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen title="Bilibili 内嵌播放器"></iframe></div>
+    <div class="m-f">
+      <a class="mini primary" id="mOpen" href="#" target="_blank" rel="noopener">在 B 站打开 ↗</a>
+      <button class="mini" id="mCopy">复制 BV 号</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const grid = document.getElementById('repoGrid');
+const cards = [...grid.querySelectorAll('.repo')];
+const search = document.getElementById('repoSearch');
+let curLang = 'all';
+function applyFilter(){
+  const q = search.value.trim().toLowerCase();
+  let shown = 0;
+  for (const c of cards){
+    const okL = curLang === 'all' || c.dataset.lang === curLang;
+    const okQ = !q || c.dataset.name.includes(q) || c.dataset.desc.includes(q);
+    c.style.display = (okL && okQ) ? '' : 'none';
+    if (okL && okQ) shown++;
+  }
+  document.getElementById('repoEmpty').style.display = shown ? 'none' : '';
+}
+search.addEventListener('input', applyFilter);
+document.querySelectorAll('.chip').forEach(ch => ch.addEventListener('click', () => {
+  document.querySelectorAll('.chip').forEach(x => x.classList.remove('active'));
+  ch.classList.add('active'); curLang = ch.dataset.lang; applyFilter();
+}));
+
+const modal = document.getElementById('playerModal');
+const frame = document.getElementById('mFrame');
+let curBvid = '';
+function openPlayer(bvid, title){
+  curBvid = bvid;
+  document.getElementById('mTitle').textContent = title;
+  frame.src = 'https://player.bilibili.com/player.html?bvid=' + bvid + '&page=1&autoplay=0&danmaku=0&high_quality=1';
+  document.getElementById('mOpen').href = 'https://www.bilibili.com/video/' + bvid + '/';
+  modal.classList.add('open');
+}
+function closePlayer(){ modal.classList.remove('open'); frame.src = ''; }
+document.querySelectorAll('[data-bvid]').forEach(el => el.addEventListener('click', () => openPlayer(el.dataset.bvid, el.dataset.title)));
+document.getElementById('mClose').addEventListener('click', closePlayer);
+modal.addEventListener('click', e => { if (e.target === modal) closePlayer(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closePlayer(); });
+document.getElementById('mCopy').addEventListener('click', async e => {
+  try { await navigator.clipboard.writeText(curBvid); e.target.textContent = '已复制 ' + curBvid; }
+  catch { e.target.textContent = curBvid; }
+  setTimeout(() => e.target.textContent = '复制 BV 号', 1600);
+});
+document.getElementById('copyM3u8').addEventListener('click', async e => {
+  const text = document.querySelector('.m3u8-panel pre').textContent;
+  try { await navigator.clipboard.writeText(text); e.target.textContent = '已复制'; }
+  catch { e.target.textContent = '复制失败，请手动选择'; }
+  setTimeout(() => e.target.textContent = '复制索引内容', 1600);
+});
+</script>
+</body>
+</html>
