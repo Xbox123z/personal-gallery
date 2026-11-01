@@ -115,7 +115,7 @@ def blog_posts_html(blog):
   <span class="post-title">{esc(p['title'])}</span>
   <span class="post-meta">{fmt_date(p['published'])} · {esc(blog['blog'])}</span></a>''')
     return "\n".join(rows)
-blog_posts_html_all = blog_posts_html(blog1) + "\n" + blog_posts_html(blog2)
+blog_posts_html_all = blog_posts_html(blog1)
 
 CSS = """
 :root{--bg:#0a0d13;--panel:#11151d;--panel2:#161b26;--line:#232a38;--txt:#e8ecf3;--sub:#9aa5b5;
@@ -254,13 +254,13 @@ HTML = f"""<!DOCTYPE html>
     <a href="https://www.instagram.com/z8463384/" target="_blank" rel="noopener">📸 Instagram</a>
     <a href="https://www.facebook.com/122142780963145822" target="_blank" rel="noopener">📘 Facebook</a>
     <a href="https://xbox123z-github.blogspot.com" target="_blank" rel="noopener">✍️ 博客 · xbox123z-github</a>
-    <a href="https://1644z114514lzp.blogspot.com" target="_blank" rel="noopener">✍️ 博客 · 菲勒斯与claudevibecoding</a>
+
   </div>
   <div class="stats">
     <div class="stat"><b>{len(pub_repos)}</b><span>GitHub 公开仓库</span></div>
     <div class="stat"><b>{len(bili['videos'])}</b><span>B站投稿视频</span></div>
     <div class="stat"><b>{len(bili['opus'])}</b><span>精选图文动态</span></div>
-    <div class="stat"><b>{len(blog1['posts']) + len(blog2['posts'])}</b><span>博客文章</span></div>
+    <div class="stat"><b>{len(blog1['posts'])}</b><span>博客文章</span></div>
     <div class="stat"><b>{bp['fans']}</b><span>B站粉丝</span></div>
   </div>
 </header>
@@ -313,16 +313,12 @@ HTML = f"""<!DOCTYPE html>
 </section>
 
 <section id="blog">
-  <div class="sec-h"><h2>✍️ 谷歌博客</h2><span class="cnt">2 个博客 · {len(blog1['posts']) + len(blog2['posts'])} 篇文章</span></div>
+  <div class="sec-h"><h2>✍️ 谷歌博客</h2><span class="cnt">{len(blog1['posts'])} 篇文章</span></div>
   <div class="grid" style="margin-bottom:8px">
     <a class="card" href="https://xbox123z-github.blogspot.com" target="_blank" rel="noopener">
       <div class="card-top"><span class="repo-name">xbox123z-github</span></div>
       <p class="card-desc">技术向博客：项目实录与折腾记录。</p>
       <div class="card-meta">xbox123z-github.blogspot.com</div></a>
-    <a class="card" href="https://1644z114514lzp.blogspot.com" target="_blank" rel="noopener">
-      <div class="card-top"><span class="repo-name">菲勒斯与claudevibecoding内容分享</span></div>
-      <p class="card-desc">概念与随笔分享。</p>
-      <div class="card-meta">1644z114514lzp.blogspot.com</div></a>
   </div>
 {blog_posts_html_all}
 </section>
@@ -356,7 +352,6 @@ HTML = f"""<!DOCTYPE html>
     <a href="https://space.bilibili.com/3493110919203314" target="_blank" rel="noopener">Bilibili</a>
     <a href="https://www.instagram.com/z8463384/" target="_blank" rel="noopener">Instagram</a>
     <a href="https://xbox123z-github.blogspot.com" target="_blank" rel="noopener">博客①</a>
-    <a href="https://1644z114514lzp.blogspot.com" target="_blank" rel="noopener">博客②</a>
     <a href="https://github.com/Xbox123z/personal-gallery" target="_blank" rel="noopener">本站源码</a>
   </div>
   <p>© 2026 天狗线人 Xbox123z · 本页数据汇总于 {GEN_TIME} CST · 部署于 Deno Deploy</p>
